@@ -6,6 +6,10 @@ autoload $ZCONFIG/functions/*(:t)
 
 export LESS="-c -R -S -M"
 
+if [[ $(uname -s) == OpenBSD ]] {
+	export PKG_PATH=ftp://ftp.bytemine.net/OpenBSD/$(uname -r)/packages/$(uname -m)
+}
+
 ulimit -c 8192
 
 for inc (
