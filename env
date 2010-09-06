@@ -1,6 +1,6 @@
 ZCONFIG=~/.config/zsh
 
-path+=(~/bin)
+path+=(~/bin /usr/local/bin)
 fpath+=($ZCONFIG/completions $ZCONFIG/functions)
 autoload $ZCONFIG/functions/*(:t)
 
