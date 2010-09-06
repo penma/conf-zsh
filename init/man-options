@@ -1,2 +1,4 @@
-export MANSECT="2:3:3posix:3pm:3perl:5:7:6:9:4:8:1:n:l"
-[[ -z $MANPATH ]] && export MANPATH=$(manpath):$HOME/packages/.collected/man
+if [[ $(uname -s) == Linux ]] {
+	export MANSECT="2:3:3posix:3pm:3perl:5:7:6:9:4:8:1:n:l"
+	[[ -z $MANPATH ]] && export MANPATH=$(manpath):$HOME/packages/.collected/man
+}
