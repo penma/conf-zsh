@@ -1,0 +1,15 @@
+autoload colors
+colors
+
+local p_bold="%{$bold_color%}"
+local p_black="%{$fg[black]%}"
+local p_red="%{$fg[red]%}"
+local p_green="%{$fg[green]%}"
+local p_yellow="%{$fg[yellow]%}"
+local p_blue="%{$fg[blue]%}"
+local p_magenta="%{$fg[magenta]%}"
+local p_cyan="%{$fg[cyan]%}"
+local p_white="%{$fg[white]%}"
+local p_default="%{$fg[default]%}"
+
+prompt_1_components+=("%(1j.${p_black}[${p_yellow}%j job%(2j.s.)${p_black}] .)${p_reset}")

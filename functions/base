@@ -1,0 +1,9 @@
+local sb=$1
+local db=$2
+local pad=$3
+shift 3
+
+for i
+{
+	echo ${(l.$pad..0..0.)${:-$[[##$db]$sb#$i]}}
+}

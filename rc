@@ -1,0 +1,30 @@
+for inc (
+	completion zle
+	prompt-{init,status,jobs,timeuh,wd,end,finish}
+) {
+	source $ZCONFIG/init/$inc
+}
+
+source $ZCONFIG/init/multicore
+source $ZCONFIG/init/zle-standard-keys
+source $ZCONFIG/init/last-line
+
+autoload -Uz compinit zargs zmv
+compinit
+
+function chpwd()
+{
+	if [[ $(hostname) = thinkchild ]]; then
+		todo
+	fi
+	if which rtab2 &> /dev/null; then
+		RTAB2_PWD=$(rtab2 $PWD)
+	else
+		RTAB2_PWD=$PWD
+	fi
+}
+
+# make devtodo execute
+chpwd
+
+time

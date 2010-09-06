@@ -1,0 +1,17 @@
+ZCONFIG=~/.config/zsh
+
+path+=(~/bin)
+fpath+=($ZCONFIG/completions $ZCONFIG/functions)
+autoload $ZCONFIG/functions/*(:t)
+
+export LESS="-c -R -S -M"
+
+ulimit -c 8192
+
+for inc (
+	aliases editor-standard man-options options
+) {
+	source $ZCONFIG/init/$inc
+}
+
+true

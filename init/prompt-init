@@ -1,0 +1,2 @@
+prompt_1_components=()
+setopt promptsubst

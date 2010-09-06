@@ -1,0 +1,7 @@
+local -a agents
+setopt nullglob
+agents=(/tmp/ssh-*/agent.+([0-9])(=))
+unsetopt nullglob
+export SSH_AUTH_SOCK=$agents[1]
+export SSH_AGENT_PID=$agents[1]:e
+unset agents

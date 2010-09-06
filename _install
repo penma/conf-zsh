@@ -1,0 +1,3 @@
+#!/bin/sh
+ln -s ~/.config/zsh/env  .zshenv
+ln -s ~/.config/zsh/rc   .zshrc

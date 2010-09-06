@@ -1,0 +1,10 @@
+for prompt_no in 1
+do
+	: ${(P)${:-PS$prompt_no}::=}
+	for component in ${(Pa)${:-prompt_${prompt_no}_components}}
+	do
+		: ${(P)${:-PS$prompt_no}::=${(P)${:-PS$prompt_no}}$component}
+	done
+	unset prompt_${prompt_no}_components
+done
+unset prompt_no

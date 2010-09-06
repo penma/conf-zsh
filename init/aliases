@@ -1,0 +1,18 @@
+function xq() { $* &! exit }
+
+alias 9="kill -9"
+alias 9a="killall -9"
+alias f="free -m"
+alias s="sync"
+alias j="jobs"
+alias u="uptime"
+
+alias 'c+'="sudo cpufreq-set -g performance"
+alias 'c-'="sudo cpufreq-set -g powersave"
+
+alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+alias ixio="curl -n -F 'f:1=<-' http://ix.io"
+alias put=ixio
+
+alias gitd="git daemon --detach --export-all --base-path=. ."
+

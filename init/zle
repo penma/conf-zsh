@@ -1,0 +1,33 @@
+bindkey -e
+
+function bash-backward-kill-word()
+{
+	local WORDCHARS=''
+	zle .backward-kill-word
+}
+zle -N backward-kill-word bash-backward-kill-word
+
+function popd-or-exit()
+{
+	echo
+	popd 2> /dev/null && zle reset-prompt && return
+	if [[ $(jobs | wc -l | tr -d \ ) = 0 ]]
+	then
+		exit
+	fi
+	
+	echo 'zsh: you have suspended jobs:'
+	jobs
+	zle reset-prompt
+}
+zle -N popd-or-exit
+setopt ignoreeof
+bindkey '^D' popd-or-exit
+
+bindkey -s '^J' '^V^J'
+
+bindkey '^[Od' vi-backward-word
+bindkey '^[Oc' vi-forward-word
+
+autoload -U url-quote-magic
+zle -N self-insert url-quote-magic

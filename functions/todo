@@ -1,0 +1,10 @@
+typeset args
+args=()
+
+if [[ -e ./.todo-expand-children ]]; then
+	args+=(-f +children)
+fi
+
+command todo $args $*
+
+# vim:ft=zsh

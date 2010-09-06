@@ -1,0 +1,10 @@
+# Download a web page:
+# -p             with everything it needs to render
+# -H             on whatever host it is
+# -k             and fix links
+# -K             while backing up original in case shit happens
+# -E             put .html extension for fun
+# -x             always generate host.com/path/to/doc directories
+# -e robots=off  and don't listen to retarded people, I want the page and
+#                not your bullshit
+wget -p -H -k -K -E -x -e robots=off $*

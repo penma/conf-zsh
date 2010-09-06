@@ -1,0 +1,22 @@
+s=$(</sys/devices/platform/thinkpad_hwmon/fan1_input)
+echo Fan: $s
+
+if [ "$1" ]
+then
+	f=""
+	[ "$1" = off ] && f=0
+	[ "$1" = low ] && f=2
+	[ "$1" = medium ] && f=4
+	[ "$1" = high ] && f=6
+	[ "$1" = ultra ] && f=disengaged
+	[ "$1" = auto ] && f=auto
+	
+	if [ "$f" ]
+	then
+		sudo sh -c "echo level $f > /proc/acpi/ibm/fan"
+		echo Speed changed to $1
+	else
+		echo Illegal speed: $1
+		echo Try off, low, medium, high, ultra, auto
+	fi
+fi

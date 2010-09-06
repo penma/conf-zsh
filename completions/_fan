@@ -1,0 +1,3 @@
+#compdef fan
+
+_arguments -s ':fan level:(off low medium high ultra auto)'

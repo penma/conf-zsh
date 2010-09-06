@@ -1,0 +1,1 @@
+mpc --format '/me np: %artist% - %title% #[%album%#]' | head -n 1

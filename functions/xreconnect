@@ -1,0 +1,9 @@
+# vim:ft=zsh
+oldip=$(curl -s www.whatismyip.org)
+newip=$oldip
+while [[ $newip = $oldip ]]
+do
+	reconnect
+	newip=$(curl -s www.whatismyip.org)
+done
+echo reconnect done, $oldip -\> $newip

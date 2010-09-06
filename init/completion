@@ -1,0 +1,1 @@
+zstyle ':completion:*:*:(vim|less):*' ignored-patterns '*.(o|so)'

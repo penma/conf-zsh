@@ -1,0 +1,2 @@
+# go to the last line of the terminal
+print -n '\e[10000B'

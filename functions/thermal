@@ -1,0 +1,6 @@
+t=($(cat /proc/acpi/ibm/thermal | grep -oE '[-0-9 ]+$'))
+echo CPU: $t[1] System Board: $t[2] GPU: $t[4] Unknown: $t[3]
+if [ $t[5] != 128 ]
+then
+	echo Battery: $t[5] $t[7]
+fi

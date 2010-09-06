@@ -1,0 +1,7 @@
+HISTFILE=~/.zsh_history
+HISTSIZE=1048576
+SAVEHIST=$HISTSIZE
+
+setopt kshglob extendedglob rc_quotes
+unsetopt badpattern histexpand
+export REPORTTIME=10

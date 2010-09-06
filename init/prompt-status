@@ -1,0 +1,3 @@
+autoload colors
+colors
+prompt_1_components+=("%(?.%{$fg_bold[green]%}0.%{$fg_bold[red]%}%?) ")

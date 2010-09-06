@@ -1,0 +1,3 @@
+#compdef rfkill
+
+_arguments -s ':kill switch:($(rfkill -z))' ':mode:(on off)'
