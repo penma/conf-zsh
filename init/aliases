@@ -16,3 +16,21 @@ alias put=ixio
 
 alias gitd="git daemon --detach --export-all --base-path=. ."
 
+# apt aliases
+alias acp='apt-cache policy'
+alias acs='apt-cache search'
+alias acsh='apt-cache show'
+alias acsp='apt-cache showpkg'
+alias afs='apt-file search'
+alias afsh='apt-file show'
+alias afu='sudo apt-file update'
+alias agap='sudo apt-get autoremove --purge'
+alias agar='sudo apt-get autoremove'
+alias agbd='sudo apt-get build-dep'
+alias agdu='sudo apt-get dist-upgrade'
+alias agi='sudo apt-get install'
+alias agp='sudo apt-get remove --purge'
+alias agr='sudo apt-get remove'
+alias ags='apt-get source'
+alias agu='sudo apt-get update'
+
