@@ -21,9 +21,11 @@ alias acp='apt-cache policy'
 alias acs='apt-cache search'
 alias acsh='apt-cache show'
 alias acsp='apt-cache showpkg'
-alias afs='apt-file search'
-alias afsh='apt-file show'
+
+alias afs='sudo apt-file search'
+alias afsh='sudo apt-file show'
 alias afu='sudo apt-file update'
+
 alias agap='sudo apt-get autoremove --purge'
 alias agar='sudo apt-get autoremove'
 alias agbd='sudo apt-get build-dep'
