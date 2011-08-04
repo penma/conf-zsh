@@ -8,7 +8,8 @@ alias j="jobs"
 alias u="uptime"
 
 alias 'c+'="sudo cpufreq-set -g performance"
-alias 'c-'="sudo cpufreq-set -g powersave"
+alias 'c-'="sudo cpufreq-set -g ondemand"
+alias 'c--'="sudo cpufreq-set -g powersave"
 
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias ixio="curl -n -F 'f:1=<-' http://ix.io"

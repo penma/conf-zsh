@@ -1,7 +1,8 @@
 if [[ $(uname -s) == Linux ]] {
 	cpucount=$(fgrep processor /proc/cpuinfo | wc -l)
 	if [[ $cpucount > 1 ]]; then
-		alias c+="$(for i in {0..$[$cpucount-1]}; do echo "sudo cpufreq-set -c $i -g performance;"; done)"
-		alias c-="$(for i in {0..$[$cpucount-1]}; do echo "sudo cpufreq-set -c $i -g powersave;"; done)"
+		alias 'c+'="$(for i in {0..$[$cpucount-1]}; do echo "sudo cpufreq-set -c $i -g performance;"; done)"
+		alias 'c-'="$(for i in {0..$[$cpucount-1]}; do echo "sudo cpufreq-set -c $i -g ondemand;"; done)"
+		alias 'c--'="$(for i in {0..$[$cpucount-1]}; do echo "sudo cpufreq-set -c $i -g powersave;"; done)"
 	fi
 }
