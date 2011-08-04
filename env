@@ -13,7 +13,7 @@ if [[ $(uname -s) == OpenBSD ]] {
 ulimit -c 8192
 
 for inc (
-	aliases editor-standard man-options options
+	aliases editor-standard man-options options perlbrew
 ) {
 	source $ZCONFIG/init/$inc
 }
